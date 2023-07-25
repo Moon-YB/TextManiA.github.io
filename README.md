@@ -1,1 +1,1 @@
-# TextManiA.github.io
+# ProjectPages-TextManiA
