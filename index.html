@@ -179,57 +179,54 @@
 </section>
 
 
+
+
 <section class="section">
-    <!-- Paper video. -->
-    <div class="container is-max-desktop has-text-centered">
-        <div class="column is-four-fifths">
-            <h2 class="title is-3">Method</h2>
-            
-            <div class="column">
-                <div class="content">
-                    <div style="float: left">
-                        <img src="./static/figures/main.png"
-                        class="interpolation-image"
-                        alt="Interpolation end reference image."
-                        width="500"
-                        hspace="70">
-                    </div>
-                    <div>
-                        <p>
-                            <h4 class="title is-4">TextManiA</h4>
-                        </p>
-                        <ul>
-                        <font size="4">
-                            <li style="text-align:left">Visual feature augmentation by conveying attribute information from the text to visual feature space</li>
-                            <li style="text-align:left">Intra-class semantic perturbation; densifying samples</li>
-                            <li style="text-align:left">Helpful in augmenting sparse samples in long-tail case</li>
-                            <li style="text-align:left">Complementary to other augmentations in deficient case</li>                  
-                        </font>
-                        </ul>
-                        <br>
-                        <p>
-                            <h4 class="title is-4">Training Process</h4>
-                        </p>
-                        <p style="text-align:left">
-                        <font size="4">
-                            1. Given image $\mathbf{I}_0$ & label $T_0$ <br>
-                            2. Synthesize text variant $T_1$ <br>
-                            3. Compute difference vector $\mathbf{\Delta}_{0\to1}$ <br>
-                            4. Add projected $\mathbf{\Delta}_{0\to1}$ with image feature $\mathbf{f}_{I_0}$ <br>
-                            5. Train the model with augmented feature <br> &nbsp&nbsp&nbsp&nbsp $\hat{\mathbf{f}}_{I_0} = \mathbf{f}_{I_0} + \alpha\cdot \mathtt{proj}(\mathbf{\Delta}_{0\to1})$
-                        </font>
-                        </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="container is-max-desktop has-text-centered">
+        <h2 class="title is-3">Method</h2> <br>
+    <div class="columns is-centered has-text-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+            <img src="./static/figures/main.png"
+            class="interpolation-image"
+            alt="Interpolation end reference image."
+            width="500">
         </div>
       </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <p>
+            <h4 class="title is-4">TextManiA</h4>
+        </p>
+        <ul style="list-style-type:disc">
+        <font size="4">
+            <li style="text-align:left">Visual feature augmentation by conveying attribute information from the text to visual feature space</li>
+            <li style="text-align:left">Intra-class semantic perturbation; densifying samples</li>
+            <li style="text-align:left">Helpful in augmenting sparse samples in long-tail case</li>
+            <li style="text-align:left">Complementary to other aug. in deficient data case</li>                  
+        </font>
+        </ul>
+        <br>
+        <p>
+            <h4 class="title is-4">Training Process</h4>
+        </p>
+        <p style="text-align:left">
+        <font size="4">
+            1. Given image $\mathbf{I}_0$ & label $T_0$ <br>
+            2. Synthesize text variant $T_1$ <br>
+            3. Compute difference vector $\mathbf{\Delta}_{0\to1}$ <br>
+            4. Add projected $\mathbf{\Delta}_{0\to1}$ with image feature $\mathbf{f}_{I_0}$ <br>
+            5. Train the model with augmented feature <br> &nbsp&nbsp&nbsp&nbsp $\hat{\mathbf{f}}_{I_0} = \mathbf{f}_{I_0} + \alpha\cdot \mathtt{proj}(\mathbf{\Delta}_{0\to1})$
+        </font>
+        </p>
+      </div>
     </div>
+    <!--/ Matting. -->
+  </div>
 </section>
-
-
 
 <section class="section">
   <div class="container is-max-desktop has-text-centered">
@@ -265,7 +262,7 @@
           <ul style="list-style-type:disc;">
           <font size="4">
             <li style="text-align:left">Embed attribute while preserving semantics</li>
-            <li style="text-align:left">Similar effects to img-level aug. by text w/o complicated operation</li>
+            <li style="text-align:left">Similar effects to img-level augmentation by text w/o complicated operation</li>
           </font>
           </ul>
       </div>
